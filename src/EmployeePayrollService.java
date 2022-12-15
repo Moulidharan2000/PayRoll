@@ -25,4 +25,13 @@ public class EmployeePayrollService {
     private void writeEmployeePayrollData() {
         System.out.println("\nWriting Employee Payroll Data to Console\n"+employeePayrollData);
     }
+    public static boolean deleteFiles(File contentsToDelete) {
+        File[] allContents = contentsToDelete.listFiles();
+        if(allContents != null) {
+            for(file file : allContents) {
+                deleteFiles(files);
+            }
+        }
+        return contentsToDelete.delete();
+    }
 }
